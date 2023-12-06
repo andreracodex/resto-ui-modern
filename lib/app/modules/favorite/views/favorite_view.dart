@@ -28,23 +28,25 @@ class FavoriteView extends GetView<FavoriteController> {
             child: SizedBox(
               width: double.infinity,
               child: Row(
-                mainAxisAlignment: MainAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   10.horizontalSpace,
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Image.asset(
-                        controller.favorite[index].image,
-                        width: 100,
-                        height: 150,
-                      ),
+                      SizedBox(
+                        child: Image.asset(
+                          controller.favorite[index].image,
+                          width: 100,
+                          height: 150,
+                        ),
+                      )
                     ],
                   ),
                   10.horizontalSpace,
-                  Container(
-                    width: 220,
+                  SizedBox(
+                    width: 150,
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       mainAxisAlignment: MainAxisAlignment.start,
@@ -79,13 +81,16 @@ class FavoriteView extends GetView<FavoriteController> {
                     crossAxisAlignment: CrossAxisAlignment.end,
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      IconButton(
-                        icon: const Icon(
-                          Icons.favorite,
-                          color: Colors.pink,
+                      SizedBox(
+                        child: IconButton(
+                          icon: const Icon(
+                            Icons.favorite,
+                            color: Colors.pink,
+                            size: 20,
+                          ),
+                          onPressed: () {},
                         ),
-                        onPressed: () {},
-                      ),
+                      )
                     ],
                   ),
                 ],

@@ -22,13 +22,12 @@ class DummyHelper {
     CategoryModel(id: 1, title: 'Near Me', image: Constants.nearme),
     CategoryModel(id: 2, title: 'Best Sellers', image: Constants.bestseller),
     CategoryModel(id: 3, title: 'Hemat', image: Constants.hemat),
+    CategoryModel(id: 4, title: 'Food', image: Constants.foods),
+    CategoryModel(id: 5, title: 'Drinks', image: Constants.drinks),
+    CategoryModel(id: 6, title: 'Snacks', image: Constants.snacks),
   ];
 
-  static List<CategoryModel2> categories2 = [
-    CategoryModel2(id: 1, title: 'Food', image: Constants.foods),
-    CategoryModel2(id: 2, title: 'Drinks', image: Constants.drinks),
-    CategoryModel2(id: 3, title: 'Snacks', image: Constants.snacks),
-  ];
+  static List<CategoryModel2> categories2 = [];
   static List<ProductModel> products = [
     ProductModel(
       id: 1,

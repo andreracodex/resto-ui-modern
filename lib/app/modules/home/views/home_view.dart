@@ -6,7 +6,6 @@ import 'package:get/get.dart';
 import 'package:resto_app/app/components/product_item.dart';
 
 import '../../../../app/components/category_item.dart';
-import '../../../../app/components/category_item_2.dart';
 import '../../../../utils/constants.dart';
 import '../../../components/custom_form_field.dart';
 import '../../../components/custom_icon_button.dart';
@@ -141,25 +140,27 @@ class HomeView extends GetView<HomeController> {
                       //   }).toList(),
                       // ),
 
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        verticalDirection: VerticalDirection.down,
-                        // crossAxisAlignment: CrossAxisAlignment.stretch,
-                        children: controller.categories.map((category) {
-                          return CategoryItem1(category: category);
-                        }).toList(),
+                      SizedBox(
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          verticalDirection: VerticalDirection.down,
+                          // crossAxisAlignment: CrossAxisAlignment.stretch,
+                          children: controller.categories.map((category) {
+                            return CategoryItem1(category: category);
+                          }).toList(),
+                        ),
                       ),
-
                       // Row(
                       //   children: [
                       //     Container(
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        verticalDirection: VerticalDirection.down,
-                        children: controller.categories2.map((category) {
-                          return CategoryItem2(category: category);
-                        }).toList(),
-                      ),
+                      // Row(
+                      //   mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      //   verticalDirection: VerticalDirection.down,
+                      //   children: controller.categories2.map((category) {
+                      //     return CategoryItem2(category: category);
+                      //   }).toList(),
+                      // ),
+
                       //     )
                       //   ],
                       // ),
