@@ -18,6 +18,7 @@ class Constants {
   static const fireIcon = 'assets/vectors/fire.svg';
   static const emojiIcon = 'assets/vectors/emoji.svg';
   static const container = 'assets/vectors/container.svg';
+  static const fav = 'assets/vectors/favorite.svg';
 
   static const nearme = 'assets/vectors/location.svg';
   static const bestseller = 'assets/vectors/best.svg';

@@ -49,16 +49,16 @@ class BaseView extends GetView<BaseController> {
               icon: Constants.homeIcon,
             ),
             _mBottomNavItem(
-              label: 'category',
-              icon: Constants.categoryIcon,
+              label: 'search',
+              icon: Constants.searchIcon,
             ),
             const BottomNavigationBarItem(
               label: '',
               icon: Center(),
             ),
             _mBottomNavItem(
-              label: 'Calendar',
-              icon: Constants.calendarIcon,
+              label: 'Favorite',
+              icon: Constants.fav,
             ),
             _mBottomNavItem(
               label: 'Profile',

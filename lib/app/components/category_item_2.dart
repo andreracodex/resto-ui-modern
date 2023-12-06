@@ -22,7 +22,7 @@ class CategoryItem2 extends StatelessWidget {
         children: [
           Card(
             child: SizedBox(
-              width: 115,
+              width: 100,
               height: 100,
               child: SvgPicture.asset(category.image),
             ),

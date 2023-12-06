@@ -1,9 +1,9 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
+import 'package:resto_app/app/components/product_item.dart';
 
 import '../../../../app/components/category_item.dart';
 import '../../../../app/components/category_item_2.dart';
@@ -11,7 +11,6 @@ import '../../../../utils/constants.dart';
 import '../../../components/custom_form_field.dart';
 import '../../../components/custom_icon_button.dart';
 import '../../../components/dark_transition.dart';
-import '../../../components/product_item.dart';
 import '../controllers/home_controller.dart';
 
 class HomeView extends GetView<HomeController> {
@@ -19,7 +18,6 @@ class HomeView extends GetView<HomeController> {
 
   @override
   Widget build(BuildContext context) {
-    SystemChrome.setEnabledSystemUIMode(SystemUiMode.leanBack);
     final theme = context.theme;
     return DarkTransition(
       offset: Offset(context.width, -1),
@@ -69,7 +67,7 @@ class HomeView extends GetView<HomeController> {
                             controller.isLightTheme
                                 ? Icons.favorite
                                 : Icons.favorite_border_outlined,
-                            color: theme.appBarTheme.iconTheme?.color,
+                            color: Colors.white,
                             size: 40,
                           ),
                         ),
@@ -117,7 +115,7 @@ class HomeView extends GetView<HomeController> {
                   ],
                 ),
                 Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 24.w),
+                  padding: EdgeInsets.symmetric(horizontal: 30.w),
                   child: Column(
                     children: [
                       20.verticalSpace,
@@ -127,31 +125,29 @@ class HomeView extends GetView<HomeController> {
                       //     return CategoryItem(category: category);
                       //   }).toList(),
                       // ),
-                      Row(
-                        children: [
-                          Container(
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: controller.categories.map((category) {
-                                return CategoryItem1(category: category);
-                              }).toList(),
-                            ),
-                          )
-                        ],
-                      ),
 
                       Row(
-                        children: [
-                          Container(
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: controller.categories2.map((category) {
-                                return CategoryItem2(category: category);
-                              }).toList(),
-                            ),
-                          )
-                        ],
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        verticalDirection: VerticalDirection.down,
+                        // crossAxisAlignment: CrossAxisAlignment.stretch,
+                        children: controller.categories.map((category) {
+                          return CategoryItem1(category: category);
+                        }).toList(),
                       ),
+
+                      // Row(
+                      //   children: [
+                      //     Container(
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        verticalDirection: VerticalDirection.down,
+                        children: controller.categories2.map((category) {
+                          return CategoryItem2(category: category);
+                        }).toList(),
+                      ),
+                      //     )
+                      //   ],
+                      // ),
                       16.verticalSpace,
                       GridView.builder(
                         gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
