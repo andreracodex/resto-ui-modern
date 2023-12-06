@@ -36,7 +36,7 @@ class CartView extends GetView<CartController> {
                   color: theme.appBarTheme.iconTheme?.color,
                 ),
               ),
-              Text('Cart 🛒', style: theme.textTheme.displaySmall),
+              Text('Carts', style: theme.textTheme.displaySmall),
               const Opacity(
                 opacity: 0.0,
                 child: CustomIconButton(onPressed: null, icon: Center()),

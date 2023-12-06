@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
+import 'package:resto_app/app/routes/app_pages.dart';
 
 import '../../../../utils/constants.dart';
 import '../../../components/custom_icon_button.dart';
@@ -34,11 +35,11 @@ class ProductsView extends GetView<ProductsController> {
                 ),
               ),
               Text(
-                'Favorite 🌽',
+                'Products',
                 style: theme.textTheme.displaySmall,
               ),
               CustomIconButton(
-                onPressed: () {},
+                onPressed: () => Get.offNamed(Routes.HOME),
                 backgroundColor: theme.scaffoldBackgroundColor,
                 borderColor: theme.dividerColor,
                 icon: SvgPicture.asset(

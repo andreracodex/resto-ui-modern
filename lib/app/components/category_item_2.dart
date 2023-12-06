@@ -22,8 +22,8 @@ class CategoryItem2 extends StatelessWidget {
         children: [
           Card(
             child: SizedBox(
-              width: 100,
-              height: 100,
+              width: 90,
+              height: 90,
               child: SvgPicture.asset(category.image),
             ),
           ).animate().fade(duration: 200.ms),
