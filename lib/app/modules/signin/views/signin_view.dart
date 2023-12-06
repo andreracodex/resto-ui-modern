@@ -76,8 +76,12 @@ class SigninView extends GetView<SigninController> {
                   child: Padding(
                     padding: const EdgeInsets.all(24.0),
                     child: Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
+                        const SizedBox(
+                          height: 50.0,
+                        ),
                         TextField(
                           keyboardType: TextInputType.emailAddress,
                           decoration: InputDecoration(
