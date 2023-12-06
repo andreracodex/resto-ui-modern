@@ -102,13 +102,28 @@ class HomeView extends GetView<HomeController> {
                         options: CarouselOptions(
                           initialPage: 1,
                           viewportFraction: 0.9,
+                          enlargeCenterPage: true,
+                          enlargeFactor: 0.25,
                           enableInfiniteScroll: true,
                           autoPlay: true,
                           autoPlayInterval: const Duration(seconds: 3),
+                          autoPlayCurve: Curves.easeOutCubic,
                         ),
                         itemCount: controller.cards.length,
                         itemBuilder: (context, itemIndex, pageViewIndex) {
-                          return Image.asset(controller.cards[itemIndex]);
+                          const CircularProgressIndicator();
+                          const Text("Loading");
+                          return Container(
+                            clipBehavior: Clip.hardEdge,
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(12.0),
+                            ),
+                            child: Image.asset(
+                              controller.cards[itemIndex],
+                              fit: BoxFit.cover,
+                            ),
+                          );
+                          // return Image.asset(controller.cards[itemIndex]);
                         },
                       ),
                     ),

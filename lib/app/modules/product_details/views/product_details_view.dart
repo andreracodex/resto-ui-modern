@@ -9,7 +9,6 @@ import '../../../../utils/dummy_helper.dart';
 import '../../../components/custom_button.dart';
 import '../../../components/custom_card.dart';
 import '../../../components/custom_icon_button.dart';
-import '../../../components/product_count_item.dart';
 import '../controllers/product_details_controller.dart';
 
 class ProductDetailsView extends GetView<ProductDetailsController> {
@@ -92,9 +91,19 @@ class ProductDetailsView extends GetView<ProductDetailsController> {
                         curve: Curves.easeInSine,
                       ),
                   const Spacer(),
-                  ProductCountItem(product: controller.product)
-                      .animate()
-                      .fade(duration: 200.ms),
+                  // ProductCountItem(product: controller.product)
+                  //     .animate()
+                  //     .fade(duration: 200.ms),
+                  Text(
+                    'Rp ${controller.product.price}',
+                    style: theme.textTheme.displaySmall?.copyWith(
+                      color: theme.colorScheme.secondary,
+                    ),
+                  ).animate().fade().slideX(
+                        duration: 300.ms,
+                        begin: -1,
+                        curve: Curves.easeInSine,
+                      ),
                 ],
               ),
             ),
@@ -102,7 +111,7 @@ class ProductDetailsView extends GetView<ProductDetailsController> {
             Padding(
               padding: EdgeInsets.symmetric(horizontal: 24.w),
               child: Text(
-                '1kg, ${controller.product.price}\$',
+                '1 Pcs',
                 style: theme.textTheme.displaySmall?.copyWith(
                   color: theme.colorScheme.secondary,
                 ),

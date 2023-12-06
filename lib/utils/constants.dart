@@ -35,12 +35,13 @@ class Constants {
   static const matches = 'assets/images/matches.png';
   static const favourites = 'assets/images/favourites.png';
 
-  static const keprabon = 'assets/images/lamb_meat.png';
-  static const koplo = 'assets/images/bell_pepper.png';
-  static const yamagoya = 'assets/images/cabbage.png';
-  static const pakdjo = 'assets/images/carrot.png';
+  static const keprabon = 'assets/images/roasted.png';
+  static const koplo = 'assets/images/keprabon.png';
+  static const yamagoya = 'assets/images/nasgor_telur.png';
+  static const pakdjo =
+      'assets/images/burger_beef_double_keju_kentang_esteh.png';
 
-  static const card1 = 'assets/images/card1.png';
-  static const card2 = 'assets/images/card2.png';
-  static const card3 = 'assets/images/card3.png';
+  static const card1 = 'assets/images/sliders/banner1.jpg';
+  static const card2 = 'assets/images/sliders/banner2.jpg';
+  static const card3 = 'assets/images/sliders/banner3.jpg';
 }

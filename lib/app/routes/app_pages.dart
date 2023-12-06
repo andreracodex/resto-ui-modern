@@ -1,4 +1,8 @@
 import 'package:get/get.dart';
+import 'package:resto_app/app/modules/favorite/bindings/favorite_binding.dart';
+import 'package:resto_app/app/modules/favorite/views/favorite_view.dart';
+import 'package:resto_app/app/modules/search/bindings/search_binding.dart';
+import 'package:resto_app/app/modules/search/views/search_view.dart';
 
 import '../modules/base/bindings/base_binding.dart';
 import '../modules/base/views/base_view.dart';
@@ -48,6 +52,16 @@ class AppPages {
       name: _Paths.SIGNUP,
       page: () => const SignupView(),
       binding: SignupBinding(),
+    ),
+    GetPage(
+      name: _Paths.FAVORITE,
+      page: () => const FavoriteView(),
+      binding: FavoriteBinding(),
+    ),
+    GetPage(
+      name: _Paths.SEARCHING,
+      page: () => const SearchView(),
+      binding: SearchBinding(),
     ),
     GetPage(
       name: _Paths.SIGNIN,

@@ -82,7 +82,7 @@ class SignupView extends GetView<SignupController> {
                           keyboardType: TextInputType.emailAddress,
                           decoration: InputDecoration(
                             filled: true,
-                            fillColor: Color(0xFFE7EDEB),
+                            fillColor: const Color(0xFFE7EDEB),
                             hintText: "Username",
                             prefixIcon: Icon(
                               Icons.person,
@@ -101,7 +101,7 @@ class SignupView extends GetView<SignupController> {
                           keyboardType: TextInputType.emailAddress,
                           decoration: InputDecoration(
                             filled: true,
-                            fillColor: Color(0xFFE7EDEB),
+                            fillColor: const Color(0xFFE7EDEB),
                             hintText: "Email",
                             prefixIcon: Icon(
                               Icons.mail,
@@ -120,7 +120,7 @@ class SignupView extends GetView<SignupController> {
                           obscureText: true,
                           decoration: InputDecoration(
                             filled: true,
-                            fillColor: Color(0xFFE7EDEB),
+                            fillColor: const Color(0xFFE7EDEB),
                             hintText: "Password",
                             prefixIcon: Icon(
                               Icons.lock,
@@ -139,7 +139,7 @@ class SignupView extends GetView<SignupController> {
                           obscureText: true,
                           decoration: InputDecoration(
                             filled: true,
-                            fillColor: Color(0xFFE7EDEB),
+                            fillColor: const Color(0xFFE7EDEB),
                             hintText: "Phone",
                             prefixIcon: Icon(
                               Icons.phone,
@@ -154,7 +154,7 @@ class SignupView extends GetView<SignupController> {
                         const SizedBox(
                           height: 50.0,
                         ),
-                        Container(
+                        SizedBox(
                           width: double.infinity,
                           child: ElevatedButton(
                               onPressed: () => Get.offNamed(Routes.SIGNIN),

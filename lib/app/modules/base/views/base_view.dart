@@ -4,11 +4,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
+import 'package:resto_app/app/modules/favorite/views/favorite_view.dart';
+import 'package:resto_app/app/modules/search/views/search_view.dart';
 
 import '../../../../utils/constants.dart';
 import '../../../routes/app_pages.dart';
-import '../../calendar/views/calendar_view.dart';
-import '../../category/views/category_view.dart';
 import '../../home/views/home_view.dart';
 import '../../profile/views/profile_view.dart';
 import '../controllers/base_controller.dart';
@@ -28,9 +28,9 @@ class BaseView extends GetView<BaseController> {
             index: controller.currentIndex,
             children: const [
               HomeView(),
-              CategoryView(),
-              Center(),
-              CalendarView(),
+              SearchView(),
+              // Center(),
+              FavoriteView(),
               ProfileView()
             ],
           ),
@@ -52,10 +52,10 @@ class BaseView extends GetView<BaseController> {
               label: 'search',
               icon: Constants.searchIcon,
             ),
-            const BottomNavigationBarItem(
-              label: '',
-              icon: Center(),
-            ),
+            // const BottomNavigationBarItem(
+            //   label: '',
+            //   icon: Center(),
+            // ),
             _mBottomNavItem(
               label: 'Favorite',
               icon: Constants.fav,
@@ -67,7 +67,7 @@ class BaseView extends GetView<BaseController> {
           ],
           onTap: controller.changeScreen,
         ),
-        floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+        floatingActionButtonLocation: FloatingActionButtonLocation.endFloat,
         floatingActionButton: FloatingActionButton(
           elevation: 0.0,
           backgroundColor: Colors.transparent,

@@ -13,6 +13,8 @@ abstract class Routes {
   static const WELCOME = _Paths.WELCOME;
   static const SIGNUP = _Paths.SIGNUP;
   static const SIGNIN = _Paths.SIGNIN;
+  static const FAVORITE = _Paths.FAVORITE;
+  static const SEARCHING = _Paths.SEARCHING;
   static const CATEGORY = _Paths.CATEGORY;
   static const CALENDAR = _Paths.CALENDAR;
   static const PROFILE = _Paths.PROFILE;
@@ -27,6 +29,8 @@ abstract class _Paths {
   static const SIGNIN = '/signin';
   static const BASE = '/base';
   static const HOME = '/home';
+  static const SEARCHING = '/searching';
+  static const FAVORITE = '/favorite';
   static const CART = '/cart';
   static const PRODUCT_DETAILS = '/product-details';
   static const CATEGORY = '/category';

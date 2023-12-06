@@ -43,6 +43,7 @@ flutter:
 
   assets:
     - assets/images/
+    - assets/images/sliders/
     - assets/vectors/
     - assets/fonts/
 

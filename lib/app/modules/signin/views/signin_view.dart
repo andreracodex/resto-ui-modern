@@ -86,7 +86,7 @@ class SigninView extends GetView<SigninController> {
                           keyboardType: TextInputType.emailAddress,
                           decoration: InputDecoration(
                             filled: true,
-                            fillColor: Color(0xFFE7EDEB),
+                            fillColor: const Color(0xFFE7EDEB),
                             hintText: "Email",
                             prefixIcon: Icon(
                               Icons.mail,
@@ -105,7 +105,7 @@ class SigninView extends GetView<SigninController> {
                           obscureText: true,
                           decoration: InputDecoration(
                             filled: true,
-                            fillColor: Color(0xFFE7EDEB),
+                            fillColor: const Color(0xFFE7EDEB),
                             hintText: "Password",
                             prefixIcon: Icon(
                               Icons.lock,
@@ -120,7 +120,7 @@ class SigninView extends GetView<SigninController> {
                         const SizedBox(
                           height: 50.0,
                         ),
-                        Container(
+                        SizedBox(
                           width: double.infinity,
                           child: ElevatedButton(
                               onPressed: () => Get.offNamed(Routes.BASE),
