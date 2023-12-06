@@ -11,6 +11,8 @@ abstract class Routes {
   static const CART = _Paths.CART;
   static const PRODUCT_DETAILS = _Paths.PRODUCT_DETAILS;
   static const WELCOME = _Paths.WELCOME;
+  static const SIGNUP = _Paths.SIGNUP;
+  static const SIGNIN = _Paths.SIGNIN;
   static const CATEGORY = _Paths.CATEGORY;
   static const CALENDAR = _Paths.CALENDAR;
   static const PROFILE = _Paths.PROFILE;
@@ -21,6 +23,8 @@ abstract class _Paths {
   _Paths._();
   static const SPLASH = '/splash';
   static const WELCOME = '/welcome';
+  static const SIGNUP = '/signup';
+  static const SIGNIN = '/signin';
   static const BASE = '/base';
   static const HOME = '/home';
   static const CART = '/cart';
